@@ -1,31 +1,27 @@
 package assn1;
-public abstract class SubOperator {
-    private String name;
-    private SubOperator next;
-    public SubOperator(String name) {
-        this.name = name;
-    }
-    public SubOperator setNext(SubOperator next) {
-        this.next = next;
-        return next;
-    }
-    public final void support(Trouble trouble) {
-        if (resolve(trouble)) {
-            done(trouble);
-        } else if (next != null) {
-            next.support(trouble);
-        } else {
-            fail(trouble);
-        }
-    }
-    public String toString() {
-        return "[" + name + "]";
-    }
-    protected abstract boolean resolve(Trouble trouble);
-    protected void done(Trouble trouble) {
-        System.out.println(trouble + " is resolved by " + this + ".");
-    }
-    protected void fail(Trouble trouble) {
-        System.out.println(trouble + " cannot be resolved.");
-    }
+
+public class SubOperator extends Operator{
+	private String op = "sub";
+	private String opChar = "-";
+
+	public SubOperator(String name) {
+		super(name);
+	}
+
+	@Override
+	protected boolean resolve(Problem problem) {
+		if(problem.getOperator().equals(this.op)) {
+			return true;
+		}
+		else {
+			return false;
+		}
+		
+	}
+	
+	@Override
+	protected void calc(Problem problem) {
+		System.out.println("" + problem.getNumber1() + " "+ opChar +" " + problem.getNumber2() + " = " +(problem.getNumber1() - problem.getNumber2())); 
+	}
+
 }

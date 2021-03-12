@@ -9,23 +9,27 @@ public abstract class Operator {
         this.next = next;
         return next;
     }
-    public final void support(Trouble trouble) {
-        if (resolve(trouble)) {
-            done(trouble);
+    public final void support(Problem problem) {
+        if (resolve(problem)) {
+            done(problem);
         } else if (next != null) {
-            next.support(trouble);
+        	System.out.println(this + " server passing " + problem.getOperator() +" operator to the next server.");
+            next.support(problem);
         } else {
-            fail(trouble);
+            fail(problem);
         }
     }
     public String toString() {
-        return "[" + name + "]";
+        return name;
     }
-    protected abstract boolean resolve(Trouble trouble);
-    protected void done(Trouble trouble) {
-        System.out.println(trouble + " is resolved by " + this + ".");
+    protected abstract boolean resolve(Problem problem);
+    protected abstract void calc(Problem problem);
+    protected void done(Problem problem) {
+    	System.out.println(this + " server Working . . .");
+    	calc(problem);
+    	System.out.println(this + " provided");
     }
-    protected void fail(Trouble trouble) {
+    protected void fail(Problem trouble) {
         System.out.println(trouble + " cannot be resolved.");
     }
 }
