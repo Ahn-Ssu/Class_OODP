@@ -8,5 +8,8 @@
 	<classpathentry kind="src" path="2-2_ThreadExample2"/>
 	<classpathentry kind="src" path="2-2_ThreadInDetail"/>
 	<classpathentry kind="src" path="AssignmentArchive"/>
+	<classpathentry kind="src" path="3-1_CodeExampleAdaptor2021/YukiAdaptor"/>
+	<classpathentry kind="src" path="3-1_CodeExampleAdaptor2021/AdaptorExercise"/>
+	<classpathentry kind="src" path="3-1_BirdAdaptorEx"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

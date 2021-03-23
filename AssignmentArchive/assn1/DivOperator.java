@@ -21,8 +21,8 @@ public class DivOperator extends Operator{
 
 	@Override
 	protected void calc(Problem problem) {
-		
-		System.out.println("" + problem.getNumber1() + " "+ opChar +" " + problem.getNumber2() + " = " +(problem.getNumber1() / problem.getNumber2())); 
+		if (problem.getNumber2() == 0)System.out.println("!Can't not Division by zero!");
+		else System.out.println("" + problem.getNumber1() + " "+ opChar +" " + problem.getNumber2() + " = " +(problem.getNumber1() / problem.getNumber2())); 
 	}
 
 }

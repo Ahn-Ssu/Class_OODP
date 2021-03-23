@@ -1,15 +1,15 @@
 class OuterClass {
   int x = 10;
-  class InnerClass {
+  static class InnerClass {
     int y = 5;
   }
 }
 public class MyInnerClass {
   public static void main(String[] args) {
-    OuterClass myOuter = new OuterClass();
+    OuterClass.InnerClass myOuter = new OuterClass.InnerClass();
 
-    OuterClass.InnerClass myInner = myOuter.new InnerClass();
-    System.out.println (myInner.y + myOuter.x);
+    // OuterClass.InnerClass myInner = myOuter.new InnerClass();
+    System.out.println (myInner.y);
   }
 } // Outputs 15 (5 + 10)
 

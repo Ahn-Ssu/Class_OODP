@@ -36,7 +36,7 @@ public class SerializationDemo {
 
 class MyClass implements Serializable {
   String s;
-   int i;
+  transient int i; // transient?
   double d;
 
   public MyClass(String s, int i, double d) {

@@ -5,7 +5,8 @@ class PassByValue {
 		b = temp;
 	}
     public static void main(String args[]) {
-        int a=1, b=2;
+        Integer a = Integer(1);
+        Integer b = Integer(2);
         System.out.println("Before swapping");
         System.out.println("a: "+a+" b: "+b);
         swap(a, b);
