@@ -1,10 +1,10 @@
 package assn2;
 
-public class SpeedControler extends Controler implements Runnable {
+public class SpeedController extends Controller implements Runnable {
     
 
-    public SpeedControler(BlackBOX myBlackBox, Sensor sensor){
-        super(myBlackBox,sensor);
+    public SpeedController(BlackBOX myBlackBox){
+        super(myBlackBox);
     }
     
     @Override
@@ -18,15 +18,6 @@ public class SpeedControler extends Controler implements Runnable {
     		Car.getInstance().setVelocity( 
     				Car.getInstance().getVelocity() - ((int)(Math.random()*10 -5)));
     		System.out.println("Thread for Speed Control, current speed : "+Car.getInstance().getVelocity());
-    		
-//    		public static final int SPEED = 0;
-//    		public static final int Lane = -> 1
-//    		public static final int TemperUp = -> 2
-//    		public static final int TemperDown = -> 3
-//    		public static final int Pedestrian = -> 4
-//    		public static final int Animal = -> 5
-//    		public static final int Traffic = -> 6 
-//    		public static final int Distance = -> 7
     		
     		
     		if(super.Event < 4 ) { // [0,1,2,3] = 속도조절(이벤트x), 차선이탈, 온도 증가, 온도 하락일 때 스피드 스레드가 속도 조

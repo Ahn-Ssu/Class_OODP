@@ -4,10 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Sensor implements Runnable {
-	private List<Controler> controlers;
+	private List<Controller> controlers;
 
 	public Sensor() {
 		this.controlers = new ArrayList<>();
+	}
+
+	public void addControler(Controller newControler) {
+		this.controlers.add(newControler);
 	}
 
 	@Override
@@ -15,7 +19,7 @@ public class Sensor implements Runnable {
 
 		for (int i = 0; i < 15; i++) {
 			int nowEvent = ((int) (Math.random() * 8));
-			for (Controler one : this.controlers) {
+			for (Controller one : this.controlers) {
 
 				one.receiveEvent(nowEvent);
 			}
@@ -25,10 +29,6 @@ public class Sensor implements Runnable {
 				e.printStackTrace();
 			}
 		}
-	}
-
-	public void addControler(Controler newControler) {
-		this.controlers.add(newControler);
 	}
 
 }

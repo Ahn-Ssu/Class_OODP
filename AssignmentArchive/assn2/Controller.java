@@ -1,14 +1,13 @@
 package assn2;
 
-public abstract class Controler {
+public abstract class Controller {
 	protected Sensor sensor;
 	protected BlackBOX blackbox;
 	protected static int Event;
-	
-	public Controler(BlackBOX blackbox, Sensor sensor) {
-		this.sensor = sensor;
+
+	public Controller(BlackBOX blackbox) {
 		this.blackbox = blackbox;
 	}
-	
+
 	public abstract void receiveEvent(int event);
 }
