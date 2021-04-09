@@ -24,3 +24,4 @@ public class RemoteDateImpl extends UnicastRemoteObject implements RemoteDate
 
 
 }
+ 
