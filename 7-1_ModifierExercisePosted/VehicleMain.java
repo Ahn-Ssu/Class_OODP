@@ -1,4 +1,4 @@
-class VehicleMain extends FinalVehicle { //Error
+class VehicleMain extends DefaultVehicle { //Error
   private String modelName = "Mustang";
   public static void main(String[] args) {
     VehicleMain myFastCar = new VehicleMain();
