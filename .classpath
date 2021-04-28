@@ -28,5 +28,8 @@
 	<classpathentry kind="src" path="5-1_singleton"/>
 	<classpathentry kind="src" path="5-2_Aggregation"/>
 	<classpathentry kind="src" path="5-2_Composition"/>
+	<classpathentry kind="src" path="1_LectureCode"/>
+	<classpathentry excluding="assn3/|assn3/|assn3/" kind="src" path="2_AssignmentArchive"/>
+	<classpathentry kind="src" path="2_AssignmentArchive/assn3"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
