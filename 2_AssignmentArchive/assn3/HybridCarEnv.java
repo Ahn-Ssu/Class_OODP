@@ -9,7 +9,7 @@ public class HybridCarEnv implements EnvTemplate {
 
 	public String showBatteryInfo() {
 
-		System.out.println("Main battery hav enough power. But secondary battery needs more charging.");
+		System.out.println("Main battery have enough power. But secondary battery needs more charging.");
 		System.out.println("Main Battery     :->" + b1 + " % Charged");
 		System.out.println("Secondary Battery:->" + b2 + " % Charged");
 

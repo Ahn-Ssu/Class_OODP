@@ -12,6 +12,6 @@ public class ElectricCarEnv implements EnvTemplate {
 		System.out.println("Main Battery     :->" + b1 + " % Charged");
 		System.out.println("Secondary Battery:->" + b2 + " % Charged");
 
-		return "Electirc";
+		return "Electric";
 	}
 }

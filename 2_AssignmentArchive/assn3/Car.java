@@ -14,7 +14,11 @@ public class Car extends CarTemplate {
 
         controllComponent();
         setBatteryWork();
+ 
+    }
 
+    public void getSpeed() {
+        super.showCurrentSpeedwithMode();
     }
 
     @Override
@@ -33,10 +37,6 @@ public class Car extends CarTemplate {
             System.out.println("( For " + super.mode + " Mode)Cut fuel to engine");
             System.out.println("Supply electricity to front and rear motors of electric car");
         }
-    }
-
-    public void getSpeed() {
-        super.showCurrentSpeedwithMode();
     }
 
     @Override

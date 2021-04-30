@@ -1,5 +1,4 @@
-public class CarController extends Car implements RequestInterface{
-
+public class CarController extends Car implements RequestInterface {
 
 	@Override
 	public void showSpeed() {
@@ -10,5 +9,5 @@ public class CarController extends Car implements RequestInterface{
 	public void changeMode(String env) {
 		super.checkNcontrollMode(env);
 	}
-    
+
 }
