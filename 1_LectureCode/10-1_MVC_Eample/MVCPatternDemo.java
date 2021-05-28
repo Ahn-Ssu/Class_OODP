@@ -23,3 +23,4 @@ public class MVCPatternDemo {
       student.setRollNo("10");
       return student;
    }
+}
